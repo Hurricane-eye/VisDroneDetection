@@ -9,7 +9,8 @@ from detectron2.structures import BoxMode
 __all__ = ["register_visdrone_voc"]
 
 CLASS_NAMES = ['__background__',  # always index 0
-               'pedestrian', 'people', 'bicycle', 'car', 'van', 'truck', 'tricycle', 'awning-tricycle', 'bus', 'motor']
+               'pedestrian', 'people', 'bicycle', 'car', 'van', 'truck',
+               'tricycle', 'awning-tricycle', 'bus', 'motor', 'others']
 
 
 def load_voc_instances(dirname: str, split: str):

@@ -138,10 +138,13 @@ dmypy.json
 cython_debug
 
 # My dataset
-VisDrone2019-DET-*/
+data/
 
 #Pycharm
 .idea/
 
 # PyTorch .pt file
 *.pt
+
+# output
+output/
