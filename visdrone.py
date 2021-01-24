@@ -8,7 +8,8 @@ import random
 
 
 CLASS_NAMES = ['__background__',  # always index 0
-               'pedestrian', 'people', 'bicycle', 'car', 'van', 'truck', 'tricycle', 'awning-tricycle', 'bus', 'motor']
+               'pedestrian', 'people', 'bicycle', 'car', 'van', 'truck',
+               'tricycle', 'awning-tricycle', 'bus', 'motor', 'others']
 
 
 def get_visdrone_dicts(dataset):
@@ -21,7 +22,7 @@ def get_visdrone_dicts(dataset):
         image_path = os.path.join(root, "images", images_names[idx])
         annotation_path = os.path.join(root, "annotations", annotations_names[idx])
         height, width = cv2.imread(image_path).shape[:2]
-        # otice: "file_name" is image's path, not only the name
+        # Notice: "file_name" is image's path, not only the name
         record = {"file_name": image_path, "image_id": idx, "height": height, "width": width}
         objs = []
         with open(annotation_path, "r") as file:
@@ -61,6 +62,6 @@ def verify_dataset(dataset):
 
 
 if __name__ == '__main__':
-    verify_dataset("VisDrone2019-DET-train")
+    verify_dataset("VisDrone2019-DET-val")
 
 
